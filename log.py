@@ -3,6 +3,7 @@
 
 import httplib, urllib
 import json
+from Modifiers import *
 
 arduino = httplib.HTTPConnection("192.168.1.40")
 # load your API key into a JSON file 'apikey.js'
@@ -17,9 +18,9 @@ try:
 	print "Arduino response:" , response.status, response.reason
 	jsonObj = json.loads(response.read())
 	a0 = jsonObj['a0']
-	print "a0:", a0
+	print "a0:", modify(a0)
 
-	params = urllib.urlencode({'field1': a0,'key':apikey})
+	params = urllib.urlencode({'field1': modify(a0),'key':apikey})
 	headers = {"Content-type": "application/x-www-form-urlencoded","Accept": "text/plain"}
 	conn = httplib.HTTPConnection("api.thingspeak.com:80")
 	conn.request("POST", "/update", params, headers)
@@ -28,5 +29,4 @@ try:
 	conn.close
 except:
 	print "connection failed!"
-
 
