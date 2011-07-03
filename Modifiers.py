@@ -3,6 +3,7 @@
 
 import math
 
+# thermistor calculation for Seeed Temperature Sensor Twig SEN23292P
 def modify(rawValue):
         a0 = float(rawValue)
 	B = 3975
