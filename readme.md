@@ -1,6 +1,8 @@
 ## Read an Arduino via REST and upload value to Thingspeak
 
-This is a great way to offload HTTP processing from your Arduino to another computer. It's great when you still want to be able control the Arduino over a web interface (in this case via a RESTful web service) for say an automation application.
+This is a great way to offload HTTP processing from your Arduino to another computer. 
+It's useful when you still want to be able control the Arduino over a web interface (in this case via a RESTful web service) an automation application where it's desired
+to log data as well as control the device.
 
 ### Instructions
 - Load your Arduino with this code: https://github.com/jjg/RESTduino
