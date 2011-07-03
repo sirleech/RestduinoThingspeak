@@ -1,4 +1,8 @@
+# Connect Arduino to network with RESTduino sketch
+# https://github.com/jjg/RESTduino
+
 import httplib, urllib
+import json
 
 arduino = httplib.HTTPConnection("192.168.1.40")
 
@@ -6,7 +10,8 @@ try:
 	arduino.request("GET","/a0")
 	response = arduino.getresponse()
 	print "Arduino response:" , response.status, response.reason
-	a0 = response.read()
+	json = json.loads(response.read())
+	a0 = json['a0']
 	print "a0:", a0
 
 	params = urllib.urlencode({'field1': a0,'key':'6Z6I1R4JT1YK6L9F'})
