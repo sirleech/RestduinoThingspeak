@@ -6,7 +6,8 @@ import json
 
 arduino = httplib.HTTPConnection("192.168.1.40")
 # load your API key into a JSON file 'apikey.js'
-f = open('apikey.js', 'r')
+# and specify the absolute path if running from Cron
+f = open('/root/dev/RestduinoThingspeak/apikey.js', 'r')
 jsonObj = json.loads(f.read())
 apikey = jsonObj['apikey']
 
