@@ -11,3 +11,6 @@ to log data as well as control the device.
 - Load your Thingspeak API key into a JSON file 'apikey.js'
 - Use the 'Modifiers.py' library to apply calculations to the raw sensor data
 - If you are using Cron to run load.py, make sure to code an absolute directory to 'apikey.js'
+
+### Example Chart
+http://deadlyspore.com/chris/viewFeed.php?feed=826&hours=12
