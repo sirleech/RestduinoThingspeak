@@ -1,6 +1,9 @@
 <?php
-// a jsonP test
+// a CORS test
 // put this on a remote server, different domain then your web client
+
+// the CORS header
+header("Access-Control-Allow-Origin: *");
 
 $analog = rand(300,500);
 $jsonData = "{\"a0\":\"$analog\"}";
