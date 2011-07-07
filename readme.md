@@ -6,7 +6,9 @@ It's useful when you still want to be able control the Arduino over a web interf
 to log data as well as control the device.
 
 ### Instructions
-- Load your Arduino with this code: https://github.com/jjg/RESTduino
+- Load your Arduino with this code: 
+  -  https://github.com/jjg/RESTduino or 
+  -  https://github.com/sirleech/Webduino/tree/master/examples/RESTduino
 - Change the IP address in 'log.py' to your Arduino's IP
 - Load your Thingspeak API key into a JSON file 'apikey.js'
 - Use the 'Modifiers.py' library to apply calculations to the raw sensor data
