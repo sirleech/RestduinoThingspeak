@@ -3,6 +3,11 @@
 
 $feed = htmlspecialchars($_GET["feed"]);
 $hours = htmlspecialchars($_GET["hours"]);
+if(!$feed)
+  $feed = "826";
+if(!$hours)
+  $hours = "2";
+
 $points = $hours*60;
 
 echo "
