@@ -8,7 +8,7 @@
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
    <script>
    function refresh() {
-	$.getJSON('http://192.168.1.41/json', function(data) {
+	$.getJSON('http://ausbots.dyndns.org:41/json', function(data) {
 	  var items = [];
 
 	  $.each(data, function(key, val) {
